@@ -1,0 +1,26 @@
+--------------------------------------------------------
+DOCKER VOLUME THEORY & CONCEPT
+--------------------------------------------------------
+
+1) Volume is simply a directory inside our Docker Container
+2) Firstly, we have to declare this directory as a Volume and then share Volume
+3) Even if we stop Container, still we can access the Volume.
+4) Volume will be created in One Container
+5) You can declare a directory as a volume Only while creating a container
+6) You can't create volume from existing container
+7) You can share one volume across any number of containers
+8) Volume will not be included when you update an image
+9) You can map volume in two ways 
+	a) Container <-> Container
+	b) Host <-> Container
+
+------------------------------------------------------------------------------
+ADVANTAGES OF USING VOLUME
+------------------------------------------------------------------------------
+
+1) Decoupling Container from Storage
+2) Share Volume across different Container
+3) Attach Volume to Container
+4) On Deleting Container Volume doesn't delete
+
+----------------------------------------------------------------------------------

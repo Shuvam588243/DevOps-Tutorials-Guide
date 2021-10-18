@@ -1,0 +1,43 @@
+----------------------------------------------------------
+STEPS FOR CREATING A VOLUME FROM DOCKER FILE
+-----------------------------------------------------------
+
+1) Create a Dockerfile and write the following code to initialize a Volume
+
+	FROM ubuntu
+	VOLUME ["/myvolume1"]
+
+2) Then create an image from the volume using the following command
+
+	docker build -t myimage
+
+3) Now, Create a new container from the above image as follows
+
+	docker run -it --name container1 myimage /bin/bash
+
+4) ls inside the container to see the volume
+
+----------------------------------------------------------------
+SHARING VOLUME TO ANOTHER CONTAINER
+----------------------------------------------------------------
+
+1) Create a new container to which you want to share the volume(You can
+only share the volume while creating the container)
+
+	docker run -it --name new_container_name --priveleged=true --volume-from 
+	old_container_name os_name /bin/bash
+
+	eg : docker run -it --name container2 --priveleged=true --volume-from 
+	container1 ubuntu /bin/bash
+
+2) Now after creating the container2, myvolume1 is visible. Whatever you do in One 
+Volume, can see from other volume
+
+	touch /myvolume1/samplefile
+	exit
+	docker start Container1
+	docker attach Container1
+	ls /myvolume1
+
+	Here, you can see the Sample file that you have created in Container 2
+	
