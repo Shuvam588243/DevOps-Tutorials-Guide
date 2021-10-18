@@ -1,0 +1,30 @@
+----------------------------------------------------------------------------
+To create an image of a container and make a new container from that image
+----------------------------------------------------------------------------
+login as : ec2-user
+yum update -y
+yum install docker -y
+service docker start
+
+---------------------------
+to create a container
+docker run -it --name Base ubuntu /bin/bash
+--------------------------
+create one file in the temp directory
+cd tmp/
+touch myfile
+----------------------------
+to check the changes made in the container from the base image
+docker diff Base
+Outputs
+C - Change
+D - Deletion
+A - Append/Addition
+--------------------------------
+To create an image of the container
+docker commit container_name image_name
+eg. docker commit ShuvamBase updatedimage
+-------------------------------------
+To create a container from the generated image
+docker run -it --name Derived updatedimage /bin/bash
+--------------------------------------

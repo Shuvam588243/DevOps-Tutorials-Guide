@@ -1,0 +1,52 @@
+-------------------------------------------
+DOCKER FILE CREATION
+-------------------------------------------
+
+STEPS :
+
+1) Create a file named Dockerfile
+2) Add instruction in Dockerfile
+3) Build dockerfile to Create Image
+4) Run Image to create container
+
+...........................................................
+
+CODE 1
+
+vi Dockerfile
+FROM ubuntu
+RUN echo "Shuvam Sengupta" > /tmp/testfile
+
+-------------------------------------------------------
+To create image out of a docker file
+
+docker build -t image_name .  (t means tag)
+docker build -t test
+docker ps -a
+docker images
+
+Now create a container from the above image
+docker run -it --name container_name image_name /bin/bash
+
+cat /tmp/testfile
+
+.................................................................
+
+CODE 2
+
+vi Dockerfile
+FROM ubuntu
+WORKDIR /tmp
+RUN echo "This is a Container" > /tmp/testfile
+ENV myname shuvamsengupta
+COPY testfile1 /tmp
+ADD test.tar.gz /tmp
+
+to create a tar file
+touch test
+tar -cvf test.tar test
+gzip test.tar
+rm -rf test
+
+..................................................................
+

@@ -1,0 +1,13 @@
+Lifecycle of a Docker Container
+
+1) Initially, the Docker container will be in the created state.
+
+2) Then the Docker container goes into the running state when the Docker run command is used.
+
+3) The Docker kill command is used to kill an existing Docker container.
+
+4) The Docker pause command is used to pause an existing Docker container.
+
+5) The Docker stop command is used to pause an existing Docker container.
+
+6) The Docker run command is used to put a container back from a stopped state to a running state.

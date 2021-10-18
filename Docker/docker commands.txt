@@ -1,0 +1,62 @@
+login as : ec2-user
+sudo su (to become root user)
+yum update -y (to update packages)
+
+Docker Commands
+---------------------------
+To Install docker
+yum install docker -y
+--------------------------------
+To check if docker is installed
+which docker
+----------------------------
+To Check Docker Version
+docker -v / docker --version
+---------------------------
+To check the docker status
+service docker status
+docker info
+---------------------------
+To start docker
+service docker start
+---------------------------
+To check existing image in docker
+docker images
+---------------------------
+to check docker running container in container
+ps means process state
+docker ps (show running container) / docker ps -a (shows running and stopped container)
+------------------------------------------
+To bring image from Docker Hub
+docker pull debian
+(debian is the os)
+------------------------------------------
+To install from Docker HUB
+docker run -it ubuntu /bin/bash
+(ubuntu is thr os name)
+-----------------------------------------
+To check which os is running in container(inside container)
+cat /etc/os-release
+-------------------------------------------
+to exit container
+exit (Container will stop on exit)
+--------------------------------------------
+To search images in docker HUB
+docker search ubuntu
+--------------------------------------------
+to give a name to your container
+docker run -it --name shuvam ubuntu /bin/bash
+---------------------------------------------
+to start a container
+docker start container_name
+----------------------------------------------
+to get inside the container
+docker attach container_name
+-----------------------------------------------
+to stop a running container
+docker stop container_name
+-----------------------------------------------
+to delete a container
+docker rm container_name (We have to stop a container before deleting)
+-----------------------------------------------
+ 

@@ -1,0 +1,46 @@
+---------------------------------------------------------------------------------------------
+1) docker kill : This command kills the container by stopping its execution immediately. The 		 		 difference between ‘docker kill’ and ‘docker stop’ is that ‘docker stop’ gives 		 	 the container time to shutdown gracefully, in situations when it is taking too                         much time for getting the container to stop, one can opt to kill it
+
+		docker kill container_id
+
+------------------------------------------------------------------------------------------------
+
+2) docker login : This command is used to login to the docker hub repository
+		
+		  docker login
+
+------------------------------------------------------------------------------------------------
+
+3) docker push : This command is used to push an image to the docker hub repository
+
+		docker push <username/image name>
+
+-----------------------------------------------------------------------------------------------
+
+4) docker logout : This command is used to logout of the docker HUB registry
+
+		docker logout
+
+-----------------------------------------------------------------------------------------------
+
+5) docker images -q : This command will return only the image id's of the images in the local
+
+----------------------------------------------------------------------------------------------
+
+6) docker inspect : this command is used to see the details of an image or container
+
+		    docker inspect image_name
+
+----------------------------------------------------------------------------------------------
+
+7) docker history : This command is used to see all the commands that were run with an image via 		   a conatiner
+
+		   docker history ImageID
+
+-----------------------------------------------------------------------------------------------
+
+8) docker stats : This command is used to provide the statistics of a running container
+
+		  docker stats container_id
+
+------------------------------------------------------------------------------------------------
